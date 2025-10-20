@@ -1,0 +1,56 @@
+body {
+    background: url('imagendepaintparalapaginaprincipaldelproyectoanualdeexpdelusuario.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center; 
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center; 
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
+    text-align: justify;
+    padding: 0 10%;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.texto-con-borde {
+    font-size: 32px;
+    border: 16px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+.enlace-menu {
+    font-size: 32px;
+    border: 16px solid black;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.enlace-menu:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.centrar-imagen {
+    text-align: center;
+    margin: 30px auto;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
