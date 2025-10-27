@@ -1,0 +1,136 @@
+/* ====================================
+   ESTILOS GENERALES Y TIPOGRAFÍA
+   ==================================== */
+
+:root {
+    /* Define variables de color para fácil mantenimiento */
+    --color-principal: #333333; /* Gris Oscuro para texto principal */
+    --color-fondo: #f9f9f9;    /* Fondo muy claro */
+    --color-acento: #cc0000;   /* Rojo para impacto y acento */
+    --color-borde: #cccccc;    /* Gris claro para bordes */
+    --ancho-contenido: 800px;  /* Ancho máximo del contenido */
+}
+
+body {
+    background-color: var(--color-fondo);
+    /* Usa una fuente sans-serif moderna y legible */
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: var(--color-principal);
+    line-height: 1.6; /* Espaciado de línea para mejor lectura */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 20px;
+    text-align: center; /* Centra el contenido a nivel de bloque */
+}
+
+/* ====================================
+   ESTILOS DE CONTENIDO Y MAQUETACIÓN
+   ==================================== */
+
+/* Contenedor principal para limitar el ancho del contenido */
+body > * {
+    max-width: var(--ancho-contenido);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Alinea el texto del contenido a la izquierda */
+}
+
+/* Estilo para todos los encabezados */
+h1, h2, h3 {
+    font-weight: 700; /* Negrita */
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--color-principal);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase; /* Mayúsculas para el título principal */
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--color-acento); /* Destaca los subtítulos */
+}
+
+h3 {
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+/* Estilo para el título principal con borde */
+.texto-con-borde {
+    /* El borde inferior utiliza el color de acento */
+    border-bottom: 3px solid var(--color-acento);
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    display: inline-block; /* Ajusta el ancho del borde al contenido */
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Estilo para los párrafos de texto */
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    /* Justifica el texto para un aspecto más formal */
+    text-align: justify;
+}
+
+/* Estilo para el texto en negrita dentro de los párrafos */
+strong {
+    color: var(--color-acento);
+}
+
+/* ====================================
+   ESTILOS PARA IMÁGENES
+   ==================================== */
+
+/* Contenedor para centrar las imágenes */
+.centrar-imagen {
+    text-align: center; /* Centra el contenido dentro del div */
+    margin: 30px 0; /* Espacio superior e inferior */
+}
+
+/* Estilo aplicado a todas las imágenes dentro del contenido principal */
+img {
+    max-width: 100%; /* Asegura que la imagen sea responsiva */
+    height: auto;
+    display: block; /* Elimina espacios extra debajo de las imágenes */
+    margin: 0 auto; /* Centra la imagen */
+    border: 1px solid var(--color-borde); /* Borde sutil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+}
+
+/* Estilo específico para la imagen que tiene un width inline de 512px */
+.centrar-imagen img[style*="width: 512px"] {
+    /* Mantiene el estilo inline, pero asegura que no exceda el 100% en móvil */
+    max-width: 100%; 
+    width: 512px !important; /* Si necesitas forzar el ancho en escritorio */
+}
+
+/* ====================================
+   ESTILOS PARA DISPOSITIVOS MÓVILES (Responsive)
+   ==================================== */
+
+@media (max-width: 600px) {
+    /* Ajustes para pantallas más pequeñas */
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    p {
+        font-size: 1em;
+        /* Vuelve a la alineación izquierda o justificada suave en móvil */
+        text-align: left; 
+    }
+}
